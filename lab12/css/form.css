@@ -1,0 +1,58 @@
+/* 
+		Name: 			
+		Date:			
+		Assignment:		Lab 12 - Introduction to Forms 
+		Purpose:		Stylesheet for forms lab 
+	
+*/
+img.fixedPos {
+	position: fixed;	
+	right: 10px;
+	top: 10px;
+	border: 3px white solid;
+	box-shadow: 10px 10px 5px rgba(125,125,125,.6);
+}
+
+body {
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.2em;
+	font-weight: bold;	
+	background-image: url('../images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	padding-left: 50px;
+	padding-bottom: 25px;
+	text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    margin-left: 50px;
+}
+
+section {
+	width: 600px;
+	margin: 20px auto;
+}
+form {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+	padding: 5px;
+	padding-top: 20px;
+    padding-left: 30px;
+    border: 6px double #00A;
+}
+
+label, p {
+	padding-left: 15px;
+}
+
+p {
+    margin:0 auto;
+    text-align: center;
+}
+

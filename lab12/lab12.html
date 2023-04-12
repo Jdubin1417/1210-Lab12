@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Justin's Mad Lib</title>
+	<link rel="stylesheet" href="css/form.css"/>
+	<link rel="icon" href="images/alfred.png"/>
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet'>
+		<!--
+			Author:			Justin Dubin
+			Class:			CSCI 1210
+			Date:			20 APR 2022
+			Assignment:		Lab 12
+			Purpose:		Introduction to Forms
+		-->
+</head>
+
+<body>
+<!-- Today's lab will involve modifying an HTML form, adding and/or changing the form controls. 
+    The instructions for this lab are embedded as comments below: 
+-->
+	<div>
+		<img class="fixedPos" src="images/alfred.jpg" alt="Alfred E. Neuman"/>
+
+<!-- Notice the form method (get) and action (php/processing.php). The 'action' attribute tells the server
+     to look for a file (script) called processing.php in the php subfolder. This is what executes when
+     the user clicks 'Submit'
+-->
+		<form method="get" action="php/processing.php">
+			<h1>MadLib of the Day</h1>
+<!--
+   Replace "Your Name's" below with your name (also replace my name in the title element with yours)
+-->
+            <h2><em>Justin's</em> New Book</h2>
+            <p>
+            <!-- Noun1 field -->
+				<label for="noun1">NOUN: </label>
+				<input type="text" name="noun1" id="noun1" placeholder="NOUN" required autofocus>
+				<br><br>
+			
+			<!-- Select list -->
+				<label for="tod">Time of Day: </label>
+				<select name="tod" id="tod" required>
+					<option value='' disabled selected style='display:none;'>Please Choose</option>
+					<option>morning</option>
+					<option>afternoon</option>
+					<option>evening</option>
+                    <option>night</option>
+				</select>
+				<br><br>
+            
+			<!-- Noun plural field -->
+				<label for="nounp1">NOUN (PLURAL): </label>
+				<input size="15" type="text" name="nounp1" id="nounp1" placeholder="NOUN (PLURAL)" required>
+			
+<!--
+    Copy lines 53-55 (above) and paste them below. Change the comment to 'Nounp2'. The label's "for=" attribute should be nounp2, as will be the input's name and id attributes
+-->
+			<!-- Noun plural field -->
+			<label for="nounp2">NOUN (PLURAL): </label>
+			<input size="15" type="text" name="nounp2" id="nounp2" placeholder="NOUN (PLURAL)" required>
+
+			<!-- Year input field -->
+			    <label for="year">YEAR: </label>
+				<input type="text" name="year" id="year" placeholder="YEAR" size="6" required>
+                <br><br>
+<!--
+   Create an input field (using the above code as a guide). This input should have a label, "CITY OR COUNTRY: " The Label's "for=" value should be 'loc'. The input type is 'text', name and id should be 'loc' and placeholder, "CITY OR COUNTRY". It should also be required.
+-->			
+				<!-- Country input field -->
+			    <label for="loc">COUNTRY: </label>
+				<input type="text" name="loc" id="loc" placeholder="country" size="6" required>
+                <br><br>
+
+				<label for="loc">CITY: </label>
+				<input type="text" name="loc" id="loc" placeholder="city" size="6" required>
+                <br><br>
+
+				<label for="bname">BOY'S NAME: </label>
+				<input type="text" name="bname" id="bname" placeholder="BOY'S NAME" size="10" required>
+                <br><br>
+<!--    Create A text input field below for a girl's name, using the 
+		above code as a guide: 
+        Label,GIRL'S NAME; for='gname'. Input name & id, gname; placeholder, GIRL'S NAME; required
+		You may have to add line breaks (<br> - as above) to get the formatting to work
+-->				<label for="gname">GIRL'S NAME: </label>
+				<input type="text" name="gname" id="gname" placeholder="GIRL'S NAME" size="10" required>
+                <br><br>
+
+			</p>
+			<!-- Radio button group -->
+				<p style="float: left; text-align:left; margin-left:100px;">
+					BUILDING TYPE:<br>
+						&nbsp;<input type="radio" name="building" value="skyrise" id="skyrise">
+						&nbsp;<label for="skyrise">Skyrise</label><br>
+						&nbsp;<input type="radio" name="building" value="colonial" id="colonial">
+						&nbsp;<label for="colonial">Colonial</label><br>
+						&nbsp;<input type="radio" name="building" value="lighthouse" id="lighthouse">
+						&nbsp;<label for="lighthouse">Lighthouse</label><br>
+						&nbsp;<input type="radio" name="building" value="gasstation" id="gasstation">
+						&nbsp;<label for="gasstation">Gas Station</label><br>
+						<!-- Uncomment the following four lines. Then save your file and refresh the display. Note that you have two new radio buttons. -->
+						&nbsp;<input type="radio" name="building" value="townhouse" id="townhouse">
+						&nbsp;<label for="townhouse">Townhouse</label><br>
+                        &nbsp;<input type="radio" name="building" value="shack" id="shack">
+                        &nbsp;<label for="shack">Shack</label><br> 
+												
+						<!-- Add two more radio buttons above, using the above code as an example. 
+                             Each should be a type of building. Remember, the 'name' value
+                             for each will be the same, 'building' -->	
+						
+							 &nbsp;<input type="radio" name="building" value="apartment" id="apartment">
+							 &nbsp;<label for="apartment">Apartment</label><br>
+							 &nbsp;<input type="radio" name="building" value="garage" id="garage">
+							 &nbsp;<label for="garage">Garage</label><br> 
+
+				</p>
+                <p style="float: right; margin-right:100px; text-align:left;">
+				    AUTHOR:<br>
+						&nbsp;<input type="radio" name="author" value="J.R.R. Tolkein" id="tolkein">
+						&nbsp;<label for="tolkein">J.R.R. Tolkein</label><br>
+						&nbsp;<input type="radio" name="author" value="Piers Anthony" id="anthony">
+						&nbsp;<label for="anthony">Piers Anthony</label><br>
+						&nbsp;<input type="radio" name="author" value="Anne McCaffery" id="mccaffery">
+						&nbsp;<label for="mccaffery">Anne McCaffery</label><br>
+						&nbsp;<input type="radio" name="author" value="Kathey Reichs" id="reichs">
+						&nbsp;<label for="reichs">Kathy Reichs</label><br>
+                    
+						<!-- Uncomment the following fourteen lines. Then save your file and refresh 
+							the display. Note that you have seven new radio buttons. -->
+						&nbsp;<input type="radio" name="author" value="Brad Thor" id="thor">
+						&nbsp;<label for="thor">Brad Thor</label><br>
+                        &nbsp;<input type="radio" name="author" value="Tom Clancy" id="clancy">
+                        &nbsp;<label for="clancy">Tom Clancy</label><br> 
+						&nbsp;<input type="radio" name="author" value="Robert A. Heinlein" id="heinlein">
+                        &nbsp;<label for="heinlein">Robert A. Heinlein</label><br> 
+						&nbsp;<input type="radio" name="author" value="Frank Herbert" id="herbert">
+                        &nbsp;<label for="herbert">Frank Herbert</label><br> 
+						&nbsp;<input type="radio" name="author" value="Mark Greaney" id="greaney">
+                        &nbsp;<label for="greaney">Mark Greaney</label><br> 
+						&nbsp;<input type="radio" name="author" value="Catherine Coulter" id="coulter">
+                        &nbsp;<label for="coulter">Catherine Coulter</label><br> 
+						&nbsp;<input type="radio" name="author" value="James Patterson" id="patterson">
+                        &nbsp;<label for="patterson">James Patterson</label><br>
+                    
+						<!-- Add a couple of your favorite authors here, using the above code as an example -->			
+						
+						&nbsp;<input type="radio" name="author" value="J.K Rowling" id="rowling">
+                        &nbsp;<label for="rowling">J.K Rowling</label><br> 
+						&nbsp;<input type="radio" name="author" value="George Lucas" id="lucas">
+                        &nbsp;<label for="lucas">George Lucas</label><br> 
+						
+				</p>				
+				<div style="clear:both;">
+                    <p>
+                        <label for="noun2">NOUN (PLURAL):</label>
+                        <input type="text" name="noun2" id="noun2" placeholder="NOUN (PLURAL)" required>
+                        <br><br>
+
+                        <label style="display:inline-block; clear:both;" for="location">LOCATION:</label>
+                        <input type="text" name="location" id="location" placeholder="LOCATION" required>
+<!--
+    Add a couple of options to the list below. The options should be emotions. Remember, you can easily
+    accomplish this by highlighting the last two options down to the blank line below them and pressing
+    Ctrl-d, then change the values, 'terror' to 'joy,' for example
+-->
+                    <!-- Select list -->
+                        <label for="emo">Emotion: </label>
+                        <select name="emo" id="emo" required>
+                            <option value='' disabled selected style='display:none;'>Please Choose</option>
+                            <option>sadness</option>
+                            <option>happiness</option>
+                            <option>excitment</option>
+                            <option>apathy</option>
+                            <option>contentment</option>
+                            <option>terror</option>
+                            <option>fright</option>
+							<option>anger</option>
+                            <option>curiosity</option>
+							
+                        </select>
+                        <br><br>
+                        
+                    <!-- 
+							Date - If you're using Firefox, this works, now. You'll 
+							still get a warning from the validator, but you
+							can ignore it
+					-->
+						<label for="date">DATE:</label>
+                        <input type="date" name="date" id='date' required>
+
+<!--
+    Add a final text input field below. It's for=, name=, and id= value should be 'verb1' (that's verb1 - 'one,' not 'ell'. 
+    It's placeholder should be 'VERB: ' and it should be required also. 
+-->                                                
+						<label for="verb1">VERB:</label>
+						<input type="text" name="verb1" id='verb1' required>
+                        <br><br> 
+                    </p>
+                </div>            
+				<p style="margin:0 auto; width: 200px;">
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset">
+				</p>
+            
+		</form>
+	</div>
+	<script src="/js/w3c.js"></script>
+</body>
+
+</html>
